@@ -19,22 +19,22 @@ from telethon.tl.types import InputStickerSetID
 from telethon.tl.types import DocumentAttributeSticker
 
 KANGING_STR = [
-    "Izin Nyolong Stikermu ya bro wkwk",
-    "Aku colong bentar ya kakak :)",
-    "Nyolong Sticker dulu yee kan",
+    "Eh... Koq bagus... aku curry ahhh :3",
+    "Aku curry ya kakak :)",
+    "Curry Sticker dulu yee kan",
     "ehh, mantep nih.....aku ambil ya kaga",
     "Bagus eaaaa....\nAmbil ahh....",
     "Ini Sticker aku ambil yaa\nDUARR!",
-    "leh ugha ni Sticker\nColong ahh~",
+    "leh ugha ni Sticker\nCurry ahh~",
     "Pim Pim Pom!!!\nni Sticker punya aing sekarang hehe",
-    "Bentar boss, ane colong dulu",
-    "Ihh, bagus nih\nColong ahh~",
+    "Bentar boss, ane curry dulu",
+    "Ihh, bagus nih\nCurry ahh~",
     "Curry lagi yee kan.....",
-    "NOLONG TROSS!!!",
-	"Bolehkah saya colong ni sticker\nau ah ambil aja hehe",
-	"Nyolong Sticker ahh.....",
-	"Wik wik dolo boss",
-	"Nolep Tukang Nyolong Stiker pula wkwk",
+    "CURRY TROSS!!!",
+	"Bolehkah saya curry ni sticker\nau ah curry aja hehe",
+	"Curry Sticker ahh.....",
+	"Curry dolo boss",
+	"Swiper jangan mencurry",
 ]
 
 
@@ -243,7 +243,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"Nyolong Stiker Berhasil wkwkwk\
+        await args.edit(f"Curry Success!\
             \n[Klik Disini!](t.me/addstickers/{packname})",
                         parse_mode='md')
 
@@ -324,13 +324,13 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Balas stikernya om -_-`")
+        await sticker.edit("`Reply to a sticker...`")
         return False
 
     try:
         img.document.attributes[1]
     except Exception:
-        await sticker.edit("`Njirrr.. Ini bukan stiker :3`")
+        await sticker.edit("`This is not a sticker...`")
         return
 
     with io.BytesIO() as image:
