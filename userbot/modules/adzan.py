@@ -4,7 +4,7 @@ import requests
 from userbot import CMD_HELP
 from userbot.events import register
 
-PLACE = ''
+PLACE = 'INDONESIA'
 
 
 @register(pattern="^\.adzan(?: |$)(.*)")
