@@ -34,7 +34,7 @@ KANGING_STR = [
 	"Bolehkah saya curry ni sticker\nau ah curry aja hehe",
 	"Curry Sticker ahh.....",
 	"Curry dolo boss",
-	"Swiper jangan mencurry",
+	"Swiper jangan mencurry hh",
 ]
 
 
