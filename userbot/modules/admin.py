@@ -593,12 +593,12 @@ async def get_admin(show):
     """ For .admins command, list all of the admins of the chat. """
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "this chat"
-    mentions = f'<b>Admins in {title}:</b> \n'
+    mentions = f'<b>⚛️Admins in {title}:⚛️</b> \n'
     try:
         async for user in show.client.iter_participants(
                 show.chat_id, filter=ChannelParticipantsAdmins):
             if not user.deleted:
-                link = f"<a href=\"tg://user?id={user.id}\">{user.first_name}</a>"
+                link = f"<a href=\"tg://user?id={user.id}\">🔥{user.first_name}</a>"
                 mentions += f"\n{link}"
             else:
                 mentions += f"\nDeleted Account <code>{user.id}</code>"
