@@ -14,9 +14,9 @@ from telethon import version
 from userbot import bot, CMD_HELP, ALIVE_NAME, UPSTREAM_REPO_BRANCH, ALIVE_LOGO
 from userbot.events import register
 
-# ================= CONSTANT =================
+# ============== CONSTANT ==============
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-# ============================================
+# =======================================
 
 
 @register(outgoing=True, pattern="^\.sysd$")
@@ -131,12 +131,13 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
-    output = (f"`ProjectBish` is running on `{UPSTREAM_REPO_BRANCH}`\n"
-             f"====================================\n"
+    output = (f"`DaengServer` is running on `{UPSTREAM_REPO_BRANCH}`\n"
+             f"================================\n"
              f"🐍 `Python    :` v{python_version()}\n"
              f"⚙️ `Telethon  :` v{version.__version__}\n"
              f"👤 `User      :` {DEFAULTUSER}\n"
-             f"====================================\n")
+             f"👁️ `Group      :` @daengserverbot\n"
+             f"================================\n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
 
