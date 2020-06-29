@@ -36,7 +36,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(event, ac_br, changelog):
     changelog_str = (
-        f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        f'**UPDATE Terbaru untuk DaengServer [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
     )
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
@@ -129,8 +129,8 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('`Successfully Updated!\n'
-                     'Bot is restarting... Wait for a second!`')
+    await event.edit('`Sukses Di Update!\n'
+                     'Bot sementara di Restart... Silahkan tunggu beberapa detik!`')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
