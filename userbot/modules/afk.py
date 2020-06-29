@@ -216,20 +216,20 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` ago"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await sender.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await sender.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                         \n**Please come back later**")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
+                        await sender.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                        await sender.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                         \n**Please come back later**")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
