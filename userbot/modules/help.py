@@ -25,10 +25,10 @@ async def help(event):
         head4 = "List Perintah Yang Aktif Saat Ini: "
         string = ""
         sep1 = "••••••••••••••••••••••••••••••••••••••••••••••"
-        sep2 = "================================="
+        sep2 = "••••••••••••••••••••••••••••••••••••••••••••••"
         for i in CMD_HELP:
             string += "`" + str(i)
-            string += "`  |  "
+            string += "`  •  "
         await event.edit(f"{head}\
               \n{sep2}\
               \n{head2}\
