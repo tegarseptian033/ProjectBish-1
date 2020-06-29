@@ -291,7 +291,7 @@ async def text_to_speech(query):
         os.remove("k.mp3")
         if BOTLOG:
             await query.client.send_message(
-                BOTLOG_CHATID, "Text to Speech executed successfully !")
+                BOTLOG_CHATID, "Copyright ® Daeng Server Bot !")
         await query.delete()
 
 
