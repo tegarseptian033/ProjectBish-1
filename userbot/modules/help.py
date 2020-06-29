@@ -20,9 +20,9 @@ async def help(event):
             await event.edit("Please specify a valid module name.")
     else:
         head = "**Help for** [DaengServer](https://github.com/daenghunter/ProjectBish-1)"
-        head2 = "Please specify which module do you want help for !!"
-        head3 = "Usage: .help <module name>"
-        head4 = "List for all available command below: "
+        head2 = "Silahkan menggunakan module yang disediakan dibawah :)"
+        head3 = "Contoh: .help <module name>"
+        head4 = "List Perintah Yang Aktif Saat Ini: "
         string = ""
         sep1 = "••••••••••••••••••••••••••••••••••••••••••••••"
         sep2 = "========================================="
