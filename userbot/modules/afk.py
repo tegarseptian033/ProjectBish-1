@@ -138,21 +138,21 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await mention.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await mention.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                         \n**Please come back later**")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
+                        await mention.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                        await mention.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
+                        \n**Silahkan kembali 1 abad kemudian :v**")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
@@ -220,7 +220,7 @@ async def afk_on_pm(sender):
                         \nReason: `{AFKREASON}`")
                 else:
                     await sender.reply(f"**Mohon maaf, bos saya sedang tidak aktif.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                        \n**Silahkan chat lagi 1 tahun kedepan**")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
