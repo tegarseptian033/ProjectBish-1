@@ -1,6 +1,6 @@
 {
   "name": "DaengServer UserBot",
-  "description": "[DaengSercer] A modular Telegram userbot running on Python 3.8",
+  "description": "[DaengServer] A modular Telegram userbot running on Python 3.8",
   "keywords": [
     "telegram",
     "userbot",
