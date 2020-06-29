@@ -66,8 +66,8 @@ RUN python3 -m ensurepip \
 # Clone repo and prepare working directory
 #
 RUN git clone -b master https://github.com/daenghunter/ProjectBish-1 /home/projectbish/
-RUN mkdir /home/daenghunter/bin/
-WORKDIR /home/daenghunter/
+RUN mkdir /home/projectbish/bin/
+WORKDIR /home/projectbish/
 
 #
 # Install requirements
