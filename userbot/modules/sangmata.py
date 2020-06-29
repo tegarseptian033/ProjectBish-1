@@ -23,17 +23,17 @@ async def _(event):
     if reply_message.sender.bot:
        await event.edit("`Reply to actual users message.`")
        return
-    await event.edit("`Processing`")
+    await event.edit("`Sedang di proses juragan`")
     async with bot.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
               await bot.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
-              await event.reply("`Please unblock @sangmatainfo_bot and try again`")
+              await event.reply("`Unblock @sangmatainfo_bot dulu bos, biar botnya bisa jalan -_-`")
               return
           if response.text.startswith("Forward"):
-             await event.edit("`can you kindly disable your forward privacy settings for good?`")
+             await event.edit("`Njerrr gak bisa di gangbang`")
           else: 
              await event.edit(f"{response.message.message}")
 
