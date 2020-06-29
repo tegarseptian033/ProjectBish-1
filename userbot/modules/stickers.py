@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The Raphielscape Company LLC.
+- # Copyright (C) 2019 The Raphielscape Company LLC.
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
@@ -243,7 +243,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"Curry Success!\
+        await args.edit(f"Nyolong Stiker Berhasil wkwkwk\
             \n[Klik Disini!](t.me/addstickers/{packname})",
                         parse_mode='md')
 
@@ -324,13 +324,13 @@ async def sticker_to_png(sticker):
 
     img = await sticker.get_reply_message()
     if not img.document:
-        await sticker.edit("`Reply to a sticker...`")
+        await sticker.edit("`Balas stikernya om -_-`")
         return False
 
     try:
         img.document.attributes[1]
     except Exception:
-        await sticker.edit("`This is not a sticker...`")
+        await sticker.edit("`Njirrr.. Ini bukan stiker :3`")
         return
 
     with io.BytesIO() as image:
