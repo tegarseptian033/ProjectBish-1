@@ -17,18 +17,18 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = (
-    "`I haven't approved you to PM yet.\n`"
-    "`wait for me to approve your PM.\n`"
-    "`Until then, don't spam My PM or you'll get blocked...\n`"
-    "`CAPICHE?\n\n`"
-    "`-Userbot`")
+    "`saya belum menyetujui Anda untuk Chat Dengan Master Saya.\n`"
+    "`tunggu master saya  untuk menyetujui chat dari Anda.\n`"
+    "`Sampai saat itu, jangan spam PM Saya atau Anda akan diblokir...\n`"
+    "`NGELAWAN BOSS?\n\n`"
+    "`-Miku Chan`")
 # =================================================================
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
-    """ Prohibits people from PMing you without approval. \
-        Will block retarded nibbas automatically. """
+    """ Melarang orang-orang dari PMing Anda tanpa persetujuan. \
+        Akan memblokir para makhluk kontol terbelakang secara otomatis.. """
     if PM_AUTO_BAN:
         self_user = await event.client.get_me()
         if event.is_private and event.chat_id != 777000 and event.chat_id != self_user.id and not (
@@ -70,8 +70,8 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`You were spamming my Mastor's PM, which I didn't like.`\n"
-                        "`You have been BLOCKED and reported as SPAM, until further notice.`"
+                        "`Anda mengirim spam ke PM Guru saya, yang tidak saya sukai.`\n"
+                        "`GW BILANG JUGA APA JANGAN SPAM KONTOL KAN DAH TERBLOKIR.`"
                     )
 
                     try:
@@ -158,7 +158,7 @@ async def notifon(non_event):
 
 @register(outgoing=True, pattern="^\.approve$")
 async def approvepm(apprvpm):
-    """ For .approve command, give someone the permissions to PM you. """
+    """ Ketik >.approve untuk memberi izin . """
     try:
         from userbot.modules.sql_helper.pm_permit_sql import approve
     except AttributeError:
@@ -220,7 +220,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " was disapproved to PM you.",
+            " Kamu Sudah di Blokir Untuk Chat dengan Master.",
         )
 
 
@@ -251,7 +251,7 @@ async def blockpm(block):
     if BOTLOG:
         await block.client.send_message(
             BOTLOG_CHATID,
-            "#BLOCKED\n" + "User: " + f"[{name0}](tg://user?id={uid})",
+            "#TERBLOKIR\n" + "User: " + f"[{name0}](tg://user?id={uid})",
         )
 
 
@@ -269,7 +269,7 @@ async def unblockpm(unblock):
         await unblock.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={replied_user.id})"
-            " was unblocc'd!.",
+            " Sudah Ter Unblock.",
         )
 
 
