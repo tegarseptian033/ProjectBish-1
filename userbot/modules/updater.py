@@ -130,7 +130,7 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit('`Berhasil Di Update!\n'
-                     'Bot Sedang Restart... Tunggu beberapa Menit!`')
+                     'Bot Sedang Restart... Tunggu beberapa Saat!`')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -174,10 +174,10 @@ async def upstream(event):
     if ac_br != UPSTREAM_REPO_BRANCH:
         await event.edit(
             '**[UPDATER]:**\n'
-            f'`Looks like you are using your own custom branch ({ac_br}). '
-            'in that case, Updater is unable to identify '
-            'which branch is to be merged. '
-            'please checkout to any official branch`')
+            f'`Sepertinya Anda menggunakan cabang kustom Anda sendiri ({ac_br}). '
+            dalam hal itu, Updater tidak dapat mengidentifikasi'
+            'Cabang mana yang akan digabung. '
+            'harap checkout ke cabang resmi mana saja`')
         return repo.__del__()
     try:
         repo.create_remote('upstream', off_repo)
@@ -204,7 +204,7 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            '`do ".update now or .update deploy" to update.`')
+            '`lakukan ".update now atau .update deploy" untuk memperbarui.`')
 
     if force_update:
         await event.edit(
