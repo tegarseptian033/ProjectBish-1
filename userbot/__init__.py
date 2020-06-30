@@ -233,7 +233,7 @@ with bot:
         quit(1)
 
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, f"`Selamat bro, saat ini bot anda sudah aktif :) Silahkan bergabung si grup kami @daengserverbot")
+    await bot.send_message(BOTLOG_CHATID, f"`Selamat bro, Daeng Server Bot Berhasil Diaktifkan !!`")
     return
 
 with bot:
