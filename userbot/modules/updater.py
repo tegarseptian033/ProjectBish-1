@@ -204,7 +204,7 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            '`lakukan ".update now atau .update deploy" untuk memperbarui.`')
+            '`Ketik command  ".update now atau .update deploy" untuk memperbarui.`')
 
     if force_update:
         await event.edit(
