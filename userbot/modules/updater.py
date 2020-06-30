@@ -36,7 +36,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(event, ac_br, changelog):
     changelog_str = (
-        f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        f'**EH ADA UPDATE BARU NIH [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
     )
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
@@ -116,8 +116,8 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit('`Successfully deployed!\n'
-                             'Restarting, please wait...`')
+            await event.edit('`Berhasil Di Update!\n'
+                             'Restarting, Tunggu...`')
     else:
         await event.edit('`Please set up HEROKU_API_KEY variable...`')
     return
@@ -129,8 +129,8 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('`Successfully Updated!\n'
-                     'Bot is restarting... Wait for a second!`')
+    await event.edit('`Berhasil Di Update!\n'
+                     'Bot Sedang Restart... Tunggu beberapa Menit!`')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -196,7 +196,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            '\n`Your USERBOT is`  **up-to-date**  `with`  '
+            '\n`Bot Kamu Sudah Di`  **UPDATE**  `oleh`  '
             f'**{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
@@ -210,7 +210,7 @@ async def upstream(event):
         await event.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     if conf == "now":
-        await event.edit('`Updating userbot, please wait....`')
+        await event.edit('`Memberbarui userbot, Silahkan Tunggu....`')
         await update(event, repo, ups_rem, ac_br)
     return
 
