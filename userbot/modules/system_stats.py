@@ -131,9 +131,7 @@ async def pipcheck(pip):
 async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
-
     output = ((f"`Project Is Running On My Master Mother Fucker\n"
-             
              f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
              f"┣[ 🐍 `Python    :` v{python_version()}\n"
              f"┣[ ⚙️ `Telethon  :` v{version.__version__}\n"
