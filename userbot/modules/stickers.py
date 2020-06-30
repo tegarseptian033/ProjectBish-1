@@ -21,7 +21,7 @@ from telethon.tl.types import DocumentAttributeSticker
 KANGING_STR = [
     "Eh... Koq bagus... aku curry ahhh :3",
     "Aku curry ya kakak :)",
-    "Curry Sticker dulu yee kan",
+    "Curi Sticker dulu yee kan Hayuuk",
     "ehh, mantep nih.....aku ambil ya kaga",
     "Bagus eaaaa....\nAmbil ahh....",
     "Ini Sticker aku ambil yaa\nDUARR!",
@@ -30,11 +30,11 @@ KANGING_STR = [
     "Bentar boss, ane curry dulu",
     "Ihh, bagus nih\nCurry ahh~",
     "Curry lagi yee kan.....",
-    "CURRY TROSS!!!",
+    "Gw Cury Dulu Yak Tod!!!",
 	"Bolehkah saya curry ni sticker\nau ah curry aja hehe",
 	"Curry Sticker ahh.....",
 	"Curry dolo boss",
-	"Swiper jangan mencurry",
+	"ets Bagi Dua ",
 ]
 
 
@@ -243,7 +243,7 @@ async def kang(args):
                 # Ensure user doesn't get spamming notifications
                 await bot.send_read_acknowledge(conv.chat_id)
 
-        await args.edit(f"Curry Success!\
+        await args.edit(f"Awokawok Stiker Berhasil Tercury :v!\
             \n[Klik Disini!](t.me/addstickers/{packname})",
                         parse_mode='md')
 
