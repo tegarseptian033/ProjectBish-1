@@ -132,13 +132,13 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
 
-    output = (f"`Projects is running on My Master♥️\n"
-                 f"COPYRIGHT (C) 2020 \n"
+    output = ((f"`Project Is Running On My Master Mother Fucker\n"
+             f"COPYRIGHT (C) 2020\n"
              f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
-             f"┣[🐍 Python    :` v{python_version()}\n"
-             f"┣[⚙️ Telethon  :` v{version.__version__}\n"
-             f"┣[👤 User      :` {DEFAULTUSER}\n"
-             f"┣[♥️ UserName  :@Nakano Miku\n"
+             f"┣[ 🐍 `Python    :` v{python_version()}\n"
+             f"┣[ ⚙️ `Telethon  :` v{version.__version__}\n"
+             f"┣[ 👤 `User      :` {DEFAULTUSER}\n"
+             f"┣[ 👽 `Username  :` @Nakano Miku\n"
              f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n")
 
     await bot.send_file(alive.chat_id, logo, caption=output)
