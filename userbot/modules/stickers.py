@@ -244,7 +244,7 @@ async def kang(args):
                 await bot.send_read_acknowledge(conv.chat_id)
 
         await args.edit(f"Awokawok Stiker Berhasil Tercury :v!\
-            \n[Klik Disini!](t.me/addstickers/{packname})",
+            \n[Klik Disini Untuk Melihat Pack Curian Gw:v](t.me/addstickers/{packname})",
                         parse_mode='md') Untuk Melihat Pack
 
 
