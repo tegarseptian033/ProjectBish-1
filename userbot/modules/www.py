@@ -17,7 +17,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^\.speed$")
 async def speedtst(spd):
     """ For .speed command, use SpeedTest to check server speeds. """
-    await spd.edit("`Running speed test . . .`")
+    await spd.edit("`Sedang mengecek Rasa Sayang . . .`")
     test = Speedtest()
 
     test.get_best_server()
@@ -69,7 +69,7 @@ async def pingme(pong):
     await pong.edit("`Pong!`")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await pong.edit("`Pong!\n%sms`" % (duration))
+    await pong.edit("`Sayang!\n%sms`" % (duration))
 
 
 CMD_HELP.update({
