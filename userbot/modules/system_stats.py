@@ -134,9 +134,9 @@ async def amireallyalive(alive):
     output = (f"`Project Is Running On My Master Mother Fucker\n"
               
               f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
-              f"┣[ 🐍 `Python    :` v{python_version()}\n"
-              f"┣[ ⚙️ `Telethon  :` v{version.__version__}\n"
-              f"┣[ 👤 `User      :@Nakano Miku\n"
+              f"┣[ 🐍 `Python     :` v{python_version()}\n"
+              f"┣[ ⚙️ `Telethon   :` v{version.__version__}\n"
+              f"┣[ 👤 `User       :@Nakano Miku\n"
               f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
