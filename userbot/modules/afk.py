@@ -216,17 +216,17 @@ async def afk_on_pm(sender):
                 afk_since = f"`{int(seconds)}s` ago"
             if sender.sender_id not in USERS:
                 if AFKREASON:
-                    await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await sender.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                    await sender.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
+                        \n**NANTI AJA CHATNYA**")
                 USERS.update({sender.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif apprv and sender.sender_id in USERS:
                 if USERS[sender.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await sender.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
+                        await sender.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
                         await sender.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
@@ -240,7 +240,7 @@ async def afk_on_pm(sender):
 
 CMD_HELP.update({
     "afk":
-    ".afk [Optional Reason]\
+    ".off [Optional Reason]\
 \nUsage: Sets you as afk.\nReplies to anyone who tags/PM's you telling them that you are AFK(reason).\
 \n\n.unoff\
 \nUsage: Back from afk state\
