@@ -176,7 +176,6 @@ async def upstream(event):
             '**[UPDATER]:**\n'
             f'`Sepertinya Anda menggunakan cabang kustom Anda sendiri ({ac_br}). '
             dalam hal itu, Updater tidak dapat mengidentifikasi'
-            'Cabang mana yang akan digabung. '
             'harap checkout ke cabang resmi mana saja`')
         return repo.__del__()
     try:
