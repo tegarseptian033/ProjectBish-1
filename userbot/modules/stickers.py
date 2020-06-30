@@ -245,7 +245,7 @@ async def kang(args):
 
         await args.edit(f"Awokawok Stiker Berhasil Tercury :v!\
             \n[Klik Disini!](t.me/addstickers/{packname})",
-                        parse_mode='md')
+                        parse_mode='md') Untuk Melihat Pack
 
 
 async def resize_photo(photo):
