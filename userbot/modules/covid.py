@@ -12,7 +12,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^\.covid (.*)")
 async def corona(event):
-    await event.edit("Processing...")
+    await event.edit("Sedang Di Proses hehe")
     country = event.pattern_match.group(1)
     covid = Covid()
     country_data = covid.get_status_by_country_name(country)
@@ -25,9 +25,9 @@ async def corona(event):
             "`Last update : "
             f"{datetime.utcfromtimestamp(country_data['last_update'] // 1000).strftime('%Y-%m-%d %H:%M:%S')}`\n"
         )
-        output_text += f"Data provided by [Johns Hopkins University](https://j.mp/2xf6oxF)\nCopyright © Daeng Server"
+        output_text += f"Data provided by [Johns Hopkins University](https://j.mp/2xf6oxF)\nCopyright © Daeng Server Bot"
     else:
-        output_text = "No information yet about this country!"
+        output_text = "Tidak Ditemukan Informasi Di Negara Ini!"
     await event.edit(f"Corona Virus Info in {country}:\n\n{output_text}")
 
 
