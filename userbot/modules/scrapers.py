@@ -63,28 +63,27 @@ async def carbon_api(e):
     elif textx:
         pcode = str(textx.message)  # Importing message to module
     code = quote_plus(pcode)  # Converting to urlencoded
-    await e.edit("`Processing...\n25%`")
+    await e.edit("`Proses Bro\n25%`")
     file_path = TEMP_DOWNLOAD_DIRECTORY + "carbon.png"
     if os.path.isfile(file_path):
         os.remove(file_path)
     url = CARBON.format(code=code, lang=CARBONLANG)
     driver = await chrome()
     driver.get(url)
-    await e.edit("`Processing...\n50%`")
+    await e.edit("`Masih Di Proses\n50%`")
     driver.find_element_by_xpath("//button[@id='export-menu']").click()
     driver.find_element_by_xpath("//button[contains(text(),'4x')]").click()
     driver.find_element_by_xpath("//button[contains(text(),'PNG')]").click()
-    await e.edit("`Processing...\n75%`")
+    await e.edit("`Dikit Lagi wkwk\n75%`")
     # Waiting for downloading
     while not os.path.isfile(file_path):
         await sleep(0.5)
-    await e.edit("`Processing...\n100%`")
+    await e.edit("`Sudah Bro\n100%`")
     await e.edit("`Uploading...`")
     await e.client.send_file(
         e.chat_id,
         file_path,
-        caption=("Made using [Carbon](https://carbon.now.sh/about/),"
-                 "\na project by [Dawn Labs](https://dawnlabs.io/)"),
+        caption=("`Jomblo ya ? ga ada kerjaan mau carbon punya orang wkwkwk`"),
         force_document=True,
         reply_to=e.message.reply_to_msg_id,
     )
@@ -291,7 +290,7 @@ async def text_to_speech(query):
         os.remove("k.mp3")
         if BOTLOG:
             await query.client.send_message(
-                BOTLOG_CHATID, "Sukses bro, Ubah Teks Jadi Pesan Suara ! -bot")
+                BOTLOG_CHATID, "`Sudah Di Ubah Bro wkwkw`")
         await query.delete()
 
 
