@@ -65,7 +65,7 @@ RUN python3 -m ensurepip \
 #
 # Clone repo and prepare working directory
 #
-RUN git clone -b master https://github.com/daenghunter/ProjectBish-1 /home/projectbish/
+RUN git clone -b master https://github.com/tegarseptian033/ProjectBish-1 /home/projectbish/
 RUN mkdir /home/projectbish/bin/
 WORKDIR /home/projectbish/
 
