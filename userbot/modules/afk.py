@@ -46,12 +46,12 @@ async def set_afk(afk_e):
     afk_start = start_1.replace(microsecond=0)
     if string:
         AFKREASON = string
-        await afk_e.edit(f"**Into the Void!**\
+        await afk_e.edit(f"**GW OFF DULU TOD!**\
         \nReason: `{string}`")
     else:
-        await afk_e.edit("**Into The Void!**")
+        await afk_e.edit("**GW OFF DULU TOD!**")
     if BOTLOG:
-        await afk_e.client.send_message(BOTLOG_CHATID, "#AFK\nYou went Away from Keyboard!")
+        await afk_e.client.send_message(BOTLOG_CHATID, "#YAHAAHAHA HAYYUK!")
     ISAFK = True
     afk_time = datetime.now()  # pylint:disable=E0602
     raise StopPropagation
@@ -72,7 +72,7 @@ async def type_afk_is_not_true(notafk):
     afk_end = back_alive.replace(microsecond=0)
     if ISAFK:
         ISAFK = False
-        msg = await notafk.edit("**I'm back BISH!**")
+        msg = await notafk.edit("**GW ON LAGI ANJING!**")
         time.sleep(3)
         await msg.delete()
         if BOTLOG:
@@ -138,21 +138,21 @@ async def mention_afk(mention):
                 afk_since = f"`{int(seconds)}s` ago"
             if mention.sender_id not in USERS:
                 if AFKREASON:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
+                    await mention.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
                         \nReason: `{AFKREASON}`")
                 else:
-                    await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                    await mention.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
+                        \n**NANTI AJA CHATNYA**")
                 USERS.update({mention.sender_id: 1})
                 COUNT_MSG = COUNT_MSG + 1
             elif mention.sender_id in USERS:
                 if USERS[mention.sender_id] % randint(2, 4) == 0:
                     if AFKREASON:
-                        await mention.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
+                        await mention.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await mention.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                        await mention.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
+                        \n**NANTI AJA CHATNYA**")
                     USERS[mention.sender_id] = USERS[mention.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
