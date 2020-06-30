@@ -229,8 +229,8 @@ async def afk_on_pm(sender):
                         await sender.reply(f"**I'm still not available right now.** (Since **{afk_since}**).\
                             \nReason: `{AFKREASON}`")
                     else:
-                        await sender.reply(f"**I'm not available right now.** (Since **{afk_since}**).\
-                        \n**Please come back later**")
+                        await sender.reply(f"**GW LAGI OFF NGENTOD.** (Since **{afk_since}**).\
+                        \n**NANTI AJA CHATNYA**")
                     USERS[sender.sender_id] = USERS[sender.sender_id] + 1
                     COUNT_MSG = COUNT_MSG + 1
                 else:
