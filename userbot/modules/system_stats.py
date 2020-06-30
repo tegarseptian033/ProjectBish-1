@@ -140,6 +140,7 @@ async def amireallyalive(alive):
              f"┣[ 👤 `User      :` {DEFAULTUSER}\n"
              f"┣[ 👽 `Username  :` @Nakano Miku\n"
              f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n")
+    
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
 
