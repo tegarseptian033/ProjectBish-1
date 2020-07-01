@@ -25,7 +25,7 @@ async def help(event):
         head4 = "Daftar untuk semua perintah tersedia di bawah ini: "
         string = ""
         sep1 = "••••••••••••••••••••••••••••••••••••••••••••••"
-        sep2 = "========================================="
+        sep2 = "==============================="
         for i in CMD_HELP:
             string += "`" + str(i)
             string += "`  |  "
