@@ -132,7 +132,7 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
     output = (f"`Project is Running With My Master♥️ \n"
-             f" COPYRIGHT © 2020 \n"
+            f" COPYRIGHT © 2020 \n"
              f"••••••••••••••••••••••••••••••••••••••••••••••••••••\n"
              f"🐍 `Python         :` v{python_version()}\n"
              f"⚙️ `Telethon      :` v{version.__version__}\n"
