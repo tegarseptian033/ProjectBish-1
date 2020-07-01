@@ -20,7 +20,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 
 
 @register(outgoing=True, pattern="^\.sysd$")
-async def sysdetails(sysd):
+async def sysdetails(sysd): 
     """ For .sysd command, get system info using neofetch. """
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -138,7 +138,7 @@ async def amireallyalive(alive):
              f"⚙️ `Telethon      :` v{version.__version__}\n"
              f"👤 `User             :` {DEFAULTUSER}\n"
              f"♥️ `Username   :@NakanoMikuuu\n"
-             f"•••••••••••••••••••••••••••••••••••••••••••••••••••\n"
+             f"•••••••••••••••••••••••••••••••••••••••••••••••••••
 \n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
