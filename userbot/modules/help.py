@@ -17,12 +17,12 @@ async def help(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("Please specify a valid module name.")
+            await event.edit("Silakan tentukan nama modul yang valid.")
     else:
-        head = "**Help for** [ProjectBish](https://github.com/BianSepang/ProjectBish)"
-        head2 = "Please specify which module do you want help for !!"
-        head3 = "Usage: .help <module name>"
-        head4 = "List for all available command below: "
+        head = "**Help for** [Miku Chan♥️](https://github.com/tegarseptian033/ProjectBish-1)"
+        head2 = "Silakan tentukan modul mana yang ingin Anda Gunakan !!"
+        head3 = "Contoh: .help <module name>"
+        head4 = "Daftar untuk semua perintah tersedia di bawah ini: "
         string = ""
         sep1 = "••••••••••••••••••••••••••••••••••••••••••••••"
         sep2 = "========================================="
