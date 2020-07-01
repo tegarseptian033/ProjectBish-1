@@ -132,12 +132,13 @@ async def amireallyalive(alive):
     """ For .alive command, check if the bot is running.  """
     logo = ALIVE_LOGO
     output = (f"`Project is Running With My Master♥️ \n"
-             f"•••••••••••••••••••••••••••••••••••••••••••••••••\n"
-             f"🐍 `Python    :` v{python_version()}\n"
-             f"⚙️ `Telethon  :` v{version.__version__}\n"
-             f"👤 `User      :` {DEFAULTUSER}\n"
-             f"👁️ `Group    :` @daengserverbot\n"
-             f"•••••••••••••••••••••••••••••••••••••••••••••••••\n")
+             f" COPYRIGHT © 2020
+             f"••••••••••••••••••••••••••••••••••••••••••••••••••••\n"
+             f"🐍 `Python         :` v{python_version()}\n"
+             f"⚙️ `Telethon      :` v{version.__version__}\n"
+             f"👤 `User             :` {DEFAULTUSER}\n"
+             f"♥️ `Username   :@NakanoMikuuu\n"
+             f"•••••••••••••••••••••••••••••••••••••••••••••••••••\n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
 
